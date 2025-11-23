@@ -24,6 +24,20 @@ export default function Emails() {
     });
   }, []);
 
+  // Update page title when an email is selected
+  useEffect(() => {
+    if (selectedEmail) {
+      document.title = `${selectedEmail.subject}`;
+    } else {
+      document.title = 'Email Client';
+    }
+
+    // Cleanup: reset title when component unmounts
+    return () => {
+      document.title = 'Email Client';
+    };
+  }, [selectedEmail]);
+
   useEffect(() => {
     // Filter by folder first (inbox or spam)
     let folderFiltered = emailList.filter((email) => {
