@@ -1,0 +1,10 @@
+{
+    "colorTheme": "green",
+    "features": {
+        "enableBulkActions": true,
+        "enableSpamFilter": true,
+        "enableSearch": true,
+        "enableReply": false,
+        "enableEmailSnippet": false
+    }
+}

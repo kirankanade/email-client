@@ -1,0 +1,77 @@
+.folder-selector {
+  display: flex;
+  gap: 8px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.folder-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.folder-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.folder-btn.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.folder-btn.active svg {
+  stroke: white;
+}
+
+.folder-btn svg {
+  flex-shrink: 0;
+}
+
+.spam-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+
+.folder-btn.active .spam-badge {
+  background-color: white;
+  color: var(--accent-color);
+}
+
+@media (max-width: 640px) {
+  .folder-selector {
+    width: 100%;
+  }
+
+  .folder-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+

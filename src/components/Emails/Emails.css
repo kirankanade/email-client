@@ -1,0 +1,21 @@
+.emails-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.email-container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 20px;
+  min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 1024px) {
+  .email-container {
+    grid-template-columns: 1fr;
+  }
+}

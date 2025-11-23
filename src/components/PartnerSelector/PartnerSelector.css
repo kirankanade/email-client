@@ -1,0 +1,90 @@
+.partner-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.selector-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.partner-dropdown {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.partner-dropdown:hover {
+  border-color: var(--accent-color);
+  background-color: var(--bg-hover);
+}
+
+.partner-dropdown:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.partner-dropdown option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+.current-theme {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  background-color: var(--accent-light);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.current-theme strong {
+  color: var(--accent-color);
+  text-transform: capitalize;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 640px) {
+  .partner-selector {
+    left: 10px;
+    top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .selector-label {
+    font-size: 12px;
+  }
+
+  .partner-dropdown {
+    width: 100%;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .current-theme {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+

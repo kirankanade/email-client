@@ -1,0 +1,48 @@
+.mode-toggle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  z-index: 1000;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 640px) {
+  .mode-toggle {
+    top: 100px;
+    right: 10px;
+  }
+}
+
+.mode-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--bg-hover);
+}
+
+.mode-toggle:active {
+  transform: scale(0.95);
+}
+
+.mode-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(var(--icon-invert, 0));
+}
+
+[data-mode='dark'] .mode-icon {
+  --icon-invert: 1;
+}
+
+.mode-toggle:hover .mode-icon {
+  transform: rotate(20deg);
+}
+
